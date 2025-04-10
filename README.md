@@ -1,3 +1,6 @@
+### Nenciu George-Robert 333CC
+
+
 # TSC_Homework
 ## Schema pe scurt
 <img src="https://github.com/robertnen/TSC_Homework/blob/main/Images/schema.svg">
