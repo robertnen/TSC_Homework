@@ -107,6 +107,12 @@
 
 <p>ESP32-C6 are un consum de energie optimizat pentru aplicații IoT. În modul activ, consumul variază în funcție de sarcină, dar poate fi redus semnificativ în modurile de repaus profund. De exemplu, în modul Deep Sleep, consumul poate fi de ordinul microamperilor, ceea ce permite o durată de viață extinsă a bateriei.</p>
 
+### Notă privind erorile Airwire / Air Wire
+
+În cadrul designului hardware, anumite erori de tip **Airwire** au fost acceptate intenționat în schema/PCB. Acestea reprezintă conexiuni logice nefinalizate în layout-ul plăcii, dar au fost tolerate în scopuri de testare, dezvoltare rapidă sau în situații unde conexiunile sunt realizate manual (ex: prin fire externe sau jumperi în faza de prototipare). 
+
+Decizia de a le păstra a fost luată pentru a permite flexibilitate în modificări ulterioare și pentru a grăbi ciclul de iterație fără a compromite funcționalitatea de bază a sistemului.
+
 ## Alte considerații
 
 <p>În proiectare, s-a ținut cont de recomandările din ghidul de design hardware pentru ESP32-C6 , asigurându-se că traseele PCB pentru interfața I2C sunt cât mai scurte și ecranate corespunzător pentru a minimiza interferențele. De asemenea, s-a acordat atenție alimentării corecte a senzorului BME680, conform specificațiilor acestuia.​
