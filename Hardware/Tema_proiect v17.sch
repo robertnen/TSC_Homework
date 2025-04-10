@@ -3110,8 +3110,8 @@ Stemma QT</text>
 <attribute name="TP_SIGNAL_NAME" x="156.21" y="-74.93" size="1.778" layer="97" rot="R180"/>
 </instance>
 <instance part="J3" gate="J1" x="182.88" y="-83.82" smashed="yes" rot="R180">
-<attribute name="VALUE" x="190.5" y="-78.486" size="1.778" layer="96" font="vector" rot="R180" align="top-left"/>
-<attribute name="NAME" x="187.96" y="-91.694" size="1.778" layer="95" font="vector" rot="R180"/>
+<attribute name="VALUE" x="190.5" y="-75.946" size="1.778" layer="96" font="vector" rot="R180" align="top-left"/>
+<attribute name="NAME" x="187.96" y="-94.234" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="SUPPLY53" gate="G$1" x="172.72" y="-81.28" smashed="yes" rot="R270">
 <attribute name="VALUE" x="170.815" y="-81.28" size="1.778" layer="96" rot="R270" align="center"/>
