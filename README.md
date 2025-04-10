@@ -7,20 +7,100 @@
 <img src="./Images/screen_reader.png">
 <br>
 
-## Module și componente utilizate
-- [] ESP32-C6-WROOM-1 (modulul principal care conține microcontrolerul ESP32-C6 și o memorie flash SPI de 8 MB)
-- [] Senzor BME688 (senzor multifuncțional)
-- [] Buton tactil
-- [] LED indicator (ADAFRUIT_CHIP-LED0603)
-- [] Port USB (USB4110GFA)
-- [] Conector JST de 1 mm (JST04_1MM_RA)
+# Conexiuni Hardware - Proiect ESP32-C6
 
-## Interfețe și conexiuni
-- [] Senzor BME688 (comunică cu ESP32-C6 prin interfața I2C, pinii utilizati sunt SDA: 3 și SCL: 4)
-- [] Buton tactil
-- [] LED indicator (ADAFRUIT_CHIP-LED0603): 11
-- [] Port USB (USB4110GFA pentru USB_D+ și USB_D- ai ESP32-C6)
-- [] Conector JST pentru baterie (JST04_1MM_RA): conectat la circuitul de alimentare
+## ESP32-C6-WROOM-1-N8 (Microcontroler Principal)
+- Interfețe disponibile: SPI, I2C, UART, GPIO
+
+---
+
+## BME688 (Senzor Ambiental)
+- Interfață: I2C  
+- **Pini utilizați**:  
+  - SDA → IO21  
+  - SCL → IO22
+
+---
+
+## DS3231SN (Real-Time Clock)
+- Interfață: I2C (partajat cu BME688)  
+- **Pini utilizați**:  
+  - SDA → IO21  
+  - SCL → IO22  
+  - INT_RTC → IO8  
+  - 32KHZ → IO1  
+  - RTC_RST → IO18
+
+---
+
+## Afișaj E-Ink (7.5 inch)
+- Interfață: SPI  
+- Rezoluție: 800 x 480 px  
+- **Pini utilizați**:  
+  - EPD_CS → IO10  
+  - EPD_DC → IO5  
+  - EPD_RST → IO23  
+  - EPD_BUSY → IO3 *(partajat cu MISO)*  
+  - MOSI, SCK *(partajate cu SD)*
+
+---
+
+## Modul SD Card
+- Interfață: SPI  
+- **Pini utilizați**:  
+  - SS_SD → IO4  
+  - MOSI → IO7  
+  - MISO → IO2  
+  - SCK → IO6
+
+---
+
+## Memorie Externă Flash (W25Q512JVEIQ, 64MB)
+- Interfață: SPI  
+- **Pini utilizați**:  
+  - FLASH_CS → IO12  
+  - MOSI, MISO, SCK *(partajate cu SD)*
+
+---
+
+## Interfață USB/SD
+- Funcții: alimentare + date  
+- **Pini utilizați**:  
+  - USB_D+ → IO13  
+  - USB_D- → IO12
+
+---
+
+## Butoane Boot și Reset
+- **Pini utilizați**:  
+  - IO/BOOT → IO9  
+  - RESET → pin dedicat *(conform schemei)*
+
+---
+
+## Sistem de Alimentare și Management
+- Baterie Li-Po: 3.7V, 2500mAh  
+- **Module și pini**:
+  - MCP73831 → încărcare prin USB-C  
+  - MAX17048 → monitorizare baterie  
+    - SDA → IO21  
+    - SCL → IO22  
+  - XC6220A331MR-G → 3.3V stabilizat
+
+---
+
+## Conector USB-C
+- Funcții: alimentare principală și transfer de date  
+- Protejat ESD
+
+---
+
+## Conector Qwiic / Stemma QT
+- Interfață: I2C  
+- **Pini utilizați**:
+  - SDA → IO21  
+  - SCL → IO22
+
 
 <p>ESP32-C6 are un consum de energie optimizat pentru aplicații IoT. În modul activ, consumul variază în funcție de sarcină, dar poate fi redus semnificativ în modurile de repaus profund. De exemplu, în modul Deep Sleep, consumul poate fi de ordinul microamperilor, ceea ce permite o durată de viață extinsă a bateriei.</p>
 
