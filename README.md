@@ -3,7 +3,9 @@
 
 # TSC_Homework
 ## Schema pe scurt
-<img src="https://github.com/robertnen/TSC_Homework/blob/main/Images/diag.svg">
+<div align="center">
+  <img src="https://github.com/robertnen/TSC_Homework/blob/main/Images/diag.svg" width="1200"/>
+</div>
 <br>
 
 ## Imaginea 3D 
