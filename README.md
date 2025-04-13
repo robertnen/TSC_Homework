@@ -3,7 +3,7 @@
 
 # TSC_Homework
 ## Schema pe scurt
-<img src="https://github.com/robertnen/TSC_Homework/blob/main/Images/schema.svg">
+<img src="https://github.com/robertnen/TSC_Homework/blob/main/Images/diag.svg">
 <br>
 
 ## Imaginea 3D 
